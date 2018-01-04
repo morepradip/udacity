@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>report</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.0392157); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher {
+  background-color: #777;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #2c313a;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  background-color: #373b41;
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1>Project: Wrangle OpenStreetMap Data</h1>
+<h2>Map Area</h2>
+<p>Pune, Maharashtra, India</p>
+<p><a href="https://mapzen.com/data/metro-extracts/metro/pune_india/">https://mapzen.com/data/metro-extracts/metro/pune_india/</a></p>
+<p>This map belong to one of the fastest growing city Pune in the state of Maharashtra, India. My hometown is 250 km away from Pune. The common language that is spoken in state of Maharashtra is Marathi, so I expect most of street names, local addresses are related to language Marathi. Marathi is my mother tongue. So, understanding the map area will not be much difficult. So, I take this opportunity to contribute to project of OpenStreetMap.org</p>
+<h2>Problems Encountered in the Map</h2>
+<p>I downloaded the metro extract of the Pune city. The size of the file is 293 MB. I created the sample OSM file of 9.3 MB from given code, to audit and clean the data. I created some audit scripts to check the problems associated with the data. Some of the problems associated with the data are listed below.</p>
+<ul>
+<li>Inconsistent postal codes. Indian postal codes are of six digit. Most of the postal codes do not have space between digits, some postal codes have space after the three digits.<pre class="editor-colors lang-xml"><div class="line"><span class="syntax--text syntax--xml"><span class="syntax--meta syntax--tag syntax--xml"><span class="syntax--punctuation syntax--definition syntax--tag syntax--xml"><span>&lt;</span></span><span class="syntax--entity syntax--name syntax--tag syntax--localname syntax--xml"><span>tag</span></span><span>&nbsp;</span><span class="syntax--entity syntax--other syntax--attribute-name syntax--localname syntax--xml"><span>k</span></span><span>=</span><span class="syntax--string syntax--quoted syntax--double syntax--xml"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--xml"><span>"</span></span><span>addr:postcode</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--xml"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--entity syntax--other syntax--attribute-name syntax--localname syntax--xml"><span>v</span></span><span>=</span><span class="syntax--string syntax--quoted syntax--double syntax--xml"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--xml"><span>"</span></span><span>411&nbsp;021</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--xml"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--tag syntax--xml"><span>/&gt;</span></span></span></span></div></pre>
+</li>
+<li><p>Regional names for street types and ways. These are Marathi names for roads but written in English. <em>("Path", "Marg")</em></p>
+</li>
+<li><p>Non standard phone numbers (Phone numbers starting with zero instead of country code) <em>(“02041206727”)</em></p>
+</li>
+</ul>
+<p>In this project street types, way names and phone numbers have been cleaned up, the data base is created in the sqlite from csv files and queried using sqlite3 engine.</p>
+<h3>Regional Names for Street Types and Ways</h3>
+<p>At the beginning I used code developed in exercise stage. When I ran the audit street types code. I found some of the problems associated with street type. The names in Marathi are translated as is. The example is given below.</p>
+<pre class="editor-colors lang-xml"><div class="line"><span class="syntax--text syntax--xml"><span class="syntax--meta syntax--tag syntax--xml"><span class="syntax--punctuation syntax--definition syntax--tag syntax--xml"><span>&lt;</span></span><span class="syntax--entity syntax--name syntax--tag syntax--localname syntax--xml"><span>tag</span></span><span>&nbsp;</span><span class="syntax--entity syntax--other syntax--attribute-name syntax--localname syntax--xml"><span>k</span></span><span>&nbsp;=</span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--xml"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--xml"><span>"</span></span><span>name</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--xml"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--entity syntax--other syntax--attribute-name syntax--localname syntax--xml"><span>v</span></span><span>&nbsp;=</span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--xml"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--xml"><span>"</span></span><span>Bhagwan&nbsp;Tatyasaheb&nbsp;Kawade&nbsp;Marg</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--xml"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--tag syntax--xml"><span>/&gt;</span></span></span></span></div><div class="line"><span class="syntax--text syntax--xml"><span class="syntax--meta syntax--tag syntax--xml"><span class="syntax--punctuation syntax--definition syntax--tag syntax--xml"><span>&lt;</span></span><span class="syntax--entity syntax--name syntax--tag syntax--localname syntax--xml"><span>tag</span></span><span>&nbsp;</span><span class="syntax--entity syntax--other syntax--attribute-name syntax--localname syntax--xml"><span>k</span></span><span>=</span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--xml"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--xml"><span>"</span></span><span>name:mr</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--xml"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--entity syntax--other syntax--attribute-name syntax--localname syntax--xml"><span>v</span></span><span>&nbsp;=</span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--xml"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--xml"><span>"</span></span><span>भगवान&nbsp;तात्यासाहेब&nbsp;कवडे&nbsp;मार्ग</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--xml"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--tag syntax--xml"><span>/&gt;</span></span></span></span></div></pre>
+<p>In Marathi "Marg" means "Road" but we can see that, it is as is written in English. The below written function cleans names for streets in the nodes and ways tags.</p>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function syntax--python"><span class="syntax--storage syntax--type syntax--function syntax--python"><span>def</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--python"><span>update_name</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function syntax--parameters syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>name</span></span><span class="syntax--punctuation syntax--separator syntax--parameters syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>mapping</span></span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--python"><span>)</span></span><span class="syntax--punctuation syntax--section syntax--function syntax--begin syntax--python"><span>:</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--block syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'''</span></span><span>&nbsp;update&nbsp;street&nbsp;names&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'''</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--conditional syntax--python"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>name</span><span>.</span><span>split</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1</span></span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--python"><span>in</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>mapping</span><span>.</span><span>keys</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>ChangedWord</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>mapping</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>name</span><span>.</span><span>split</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1</span></span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>name</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>name</span><span>.</span><span>split</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span>:</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1</span></span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--function-call syntax--python"><span>name</span><span>.</span><span>append</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>ChangedWord</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>name</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>.</span><span class="syntax--meta syntax--function-call syntax--python"><span>j</span><span>oin</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span>name</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--statement syntax--python"><span>return</span></span><span>&nbsp;</span><span>name</span></span></div></pre>
+<h3>Phone Numbers</h3>
+<p>Some phone numbers start with '0'. Ideally the phone number should start with plus sign and country code. The following is the extract of the document on wiki page of openstreetmap which specifies the structure of the phone number.</p>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function syntax--python"><span class="syntax--storage syntax--type syntax--function syntax--python"><span>def</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--python"><span>update_phone_number</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function syntax--parameters syntax--python"><span class="syntax--variable syntax--parameter syntax--function syntax--python"><span>phone_number</span></span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--python"><span>)</span></span><span class="syntax--punctuation syntax--section syntax--function syntax--begin syntax--python"><span>:</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--block syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'''</span></span><span>&nbsp;update&nbsp;phone&nbsp;numbers&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'''</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--conditional syntax--python"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>phone_number</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>0</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--python"><span>==</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>'</span></span><span>0</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>'</span></span></span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>new_number</span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span>+91</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--python"><span>+</span></span><span>&nbsp;</span><span class="syntax--meta syntax--item-access syntax--python"><span>phone_number</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--item-access syntax--arguments syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1</span></span><span>:</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>]</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--statement syntax--python"><span>return</span></span><span>&nbsp;</span><span>new_number</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--conditional syntax--python"><span>else</span></span><span>:</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--statement syntax--python"><span>return</span></span><span>&nbsp;</span><span>phone_number</span></span></div></pre>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>nodes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>nodes_tags</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ways</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ways_tags</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ways_nodes</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Size of the Files</h3>
+<p>audit_clean_phone_numbers.py --&gt; 1.58 kB<br>audit_clean_street_types.py --&gt; 1.92 kB<br>audit_clean_way_names.py --&gt; 1.89 kB<br>create_db.sql --&gt; 1.87 kB<br>data.py --&gt; 8.83 kB<br>database_query.ipynb --&gt; 22.57 kB<br>database_query.md --&gt; 12.18 kB<br>nodes.csv --&gt; 113.35 MB<br>nodes_tags.csv --&gt; 512.25 kB<br>openstreet.db --&gt; 228.12 MB<br>pune_india.osm --&gt; 293.96 MB<br>sample.osm --&gt; 9.3 MB<br>schema.py --&gt; 2.56 kB<br>ways.csv --&gt; 15.73 MB<br>ways_nodes.csv --&gt; 39.13 MB<br>ways_tags.csv --&gt; 9.06 MB  </p>
+<h3>Number of Nodes</h3>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line syntax--number-sign syntax--python"><span class="syntax--punctuation syntax--definition syntax--comment syntax--python"><span>#</span></span><span>&nbsp;number&nbsp;of&nbsp;nodes</span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>pd</span><span>.</span><span>read_sql_query</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;</span><span class="syntax--support syntax--function syntax--aggregate syntax--sql"><span>COUNT</span></span><span>(</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;nodes;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>,&nbsp;</span><span>conn</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div></pre>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT(*)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1418342</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3>Number of Ways</h3>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>pd</span><span>.</span><span>read_sql_query</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;</span><span class="syntax--support syntax--function syntax--aggregate syntax--sql"><span>COUNT</span></span><span>(</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;ways;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>&nbsp;,</span><span>conn</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div></pre>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT(*)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>270302</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3>Number of unique users</h3>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>pd</span><span>.</span><span>read_sql_query</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;</span><span class="syntax--support syntax--function syntax--aggregate syntax--sql"><span>COUNT</span></span><span>(DISTINCT(</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>e</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>uid</span></span><span>))</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;(</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;uid&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;nodes&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>UNION&nbsp;ALL</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;uid&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;ways)&nbsp;e;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>,&nbsp;</span><span>conn</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div></pre>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>COUNT(DISTINCT(e.uid))</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>690</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h1>Additional Ideas</h1>
+<ol>
+<li><p><strong> Phone Numbers with space or dash between country code, area code and local number </strong>
+As mentioned earlier the phone number should have following format.</p>
+<p><code>"phone" = "number" where the number should be in international (ITU-T E.164) format
+phone = +&lt;country code&gt; &lt;area code&gt; &lt;local number&gt;, following the ITU-T E.123 and the DIN 5008 pattern
+phone = +&lt;country code&gt;-&lt;area code&gt;-&lt;local number&gt;, following the RFC 3966/NANP pattern)</code></p>
+<p>I have addressed only the country code issue i.e. phone numbers begining with zero have been replaced by plus sign and country code. In fact the country code, area code and local numbers should be seperated by either "dash" or "space". This will completely address the phone numbers issue.
+<br><br></p>
+</li>
+<li><p><strong> Differentiation between mobile numbers and landline numbers </strong>
+In India mobile numbers do not have area codes. So to represent mobile numbers there has to be some different strategy. Mobile numbers have 10 digits, it might be represented like this +91-123-456-7890 or +91 123 456 7890
+<br><br></p>
+</li>
+<li><p><strong>Inconsistency in postal codes</strong>
+Indian postal codes have six digits. There is particular format provided in documentation on how to represent postal codes. But Indian case since it has six digits it makes sense to have either space or dash after three digitis. It will increase the readability.</p>
+</li>
+</ol>
+<h2>Additional Data Exploration</h2>
+<h3>Top 10 appearing amenities</h3>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>pd</span><span>.</span><span>read_sql_query</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;value,&nbsp;</span><span class="syntax--support syntax--function syntax--aggregate syntax--sql"><span>COUNT</span></span><span>(</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>as</span></span><span>&nbsp;num&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;nodes_tags&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span><span>&nbsp;key</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>amenity</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>GROUP&nbsp;BY</span></span><span>&nbsp;value&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>ORDER&nbsp;BY</span></span><span>&nbsp;num&nbsp;</span><span class="syntax--keyword syntax--other syntax--order syntax--sql"><span>DESC</span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>LIMIT</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--sql"><span>10</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>,&nbsp;</span><span>conn</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div></pre>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>value</th>
+      <th>num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>restaurant</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>bank</td>
+      <td>175</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>atm</td>
+      <td>139</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>place_of_worship</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>cafe</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>fast_food</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>hospital</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>fuel</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>school</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>police</td>
+      <td>31</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<h3>Biggest Religion</h3>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>pd</span><span>.</span><span>read_sql_query</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>value</span></span><span>,&nbsp;</span><span class="syntax--support syntax--function syntax--aggregate syntax--sql"><span>COUNT</span></span><span>(</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>as</span></span><span>&nbsp;num&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;nodes_tags&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>JOIN</span></span><span>&nbsp;(</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT&nbsp;DISTINCT</span></span><span>(id)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;nodes_tags&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span><span>&nbsp;value&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>place_of_worship</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>)&nbsp;i&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>ON</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>id</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>i</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>id</span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>key</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>religion</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>GROUP&nbsp;BY</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>value</span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>ORDER&nbsp;BY</span></span><span>&nbsp;num&nbsp;</span><span class="syntax--keyword syntax--other syntax--order syntax--sql"><span>DESC</span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>LIMIT</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--sql"><span>3</span></span><span>;&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>,&nbsp;</span><span>conn</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div></pre>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>value</th>
+      <th>num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>hindu</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>muslim</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>christian</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<p>No surprise here. Almost 80% of Indian population has religion of Hindu. We can see that Hindu and Muslim are two bigger religions in city of Pune, even this statistic is applicable at national level as well.</p>
+<pre class="editor-colors lang-python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span>pd</span><span>.</span><span>read_sql_query</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--python"><span>(</span></span><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--python"><span>"</span></span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>value</span></span><span>,&nbsp;</span><span class="syntax--support syntax--function syntax--aggregate syntax--sql"><span>COUNT</span></span><span>(</span><span class="syntax--keyword syntax--operator syntax--star syntax--sql"><span>*</span></span><span>)&nbsp;</span><span class="syntax--keyword syntax--other syntax--alias syntax--sql"><span>as</span></span><span>&nbsp;num&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;nodes_tags&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>JOIN</span></span><span>&nbsp;(</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>SELECT&nbsp;DISTINCT</span></span><span>(id)&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>FROM</span></span><span>&nbsp;nodes_tags&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span><span>&nbsp;value</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>restaurant</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>)&nbsp;i&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DDL syntax--create syntax--II syntax--sql"><span>ON</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>id</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>i</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>id</span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>WHERE</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>key</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--sql"><span>=</span></span><span class="syntax--string syntax--quoted syntax--single syntax--sql"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--sql"><span>'</span></span><span>cuisine</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--sql"><span>'</span></span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>GROUP&nbsp;BY</span></span><span>&nbsp;</span><span class="syntax--constant syntax--other syntax--database-name syntax--sql"><span>nodes_tags</span></span><span>.</span><span class="syntax--constant syntax--other syntax--table-name syntax--sql"><span>value</span></span><span>&nbsp;</span><span class="syntax--constant syntax--character syntax--escape syntax--newline syntax--python"><span>\</span></span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--meta syntax--function-call syntax--python"><span class="syntax--meta syntax--function-call syntax--arguments syntax--python"><span class="syntax--string syntax--quoted syntax--double syntax--single-line syntax--sql syntax--python"><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>ORDER&nbsp;BY</span></span><span>&nbsp;num&nbsp;</span><span class="syntax--keyword syntax--other syntax--order syntax--sql"><span>DESC</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--other syntax--DML syntax--sql"><span>limit</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--sql"><span>5</span></span><span>;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--python"><span>"</span></span></span><span>,&nbsp;</span><span>conn</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--python"><span>)</span></span></span></span></div></pre>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>value</th>
+      <th>num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>indian</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>vegetarian</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>pizza</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>regional</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>international</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Conclusion</h2>
+<p>The street types and phone numbers have cleaned as part of this project requirement. As mentioned in additional ideas, lot of cleaning is still left. To bring improvements faster to openstreet map project, I think people have to start using it. The local businesses, communities should be encouraged to add their details to the map data.</p>
+<h3>Benefits of Suggestions</h3>
+<ol>
+<li><p>If local businesses start entering their the information the map data will be more accurate and updated.</p>
+</li>
+<li><p>It will be easy for others find out necessary about information about locating businesses or addresses.</p>
+</li>
+</ol>
+<h3>Anticipated Problems in Implementations</h3>
+<ol>
+<li><p>Due to availability and popularity of Google maps. People will be hesitant to use other maps. Bringing people to OpenStreetMap will itself be big challenge.</p>
+</li>
+<li><p>Making local [e.g. Language] specific user interfaces so that adding information about local businesses and addresses will be easy.</p>
+</li>
+</ol>
+<h2>References</h2>
+<ol>
+<li><a href="https://mapzen.com/data/metro-extracts/metro/pune_india/">https://mapzen.com/data/metro-extracts/metro/pune_india/</a></li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Key:phone">http://wiki.openstreetmap.org/wiki/Key:phone</a></li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Names">http://wiki.openstreetmap.org/wiki/Names</a></li>
+<li><a href="https://gist.github.com/carlward/54ec1c91b62a5f911c42#file-sample_project-md">https://gist.github.com/carlward/54ec1c91b62a5f911c42#file-sample_project-md</a></li>
+<li><a href="https://www.dataquest.io/blog/python-pandas-databases/">https://www.dataquest.io/blog/python-pandas-databases/</a></li>
+<li><a href="https://discussions.udacity.com/t/project-suggestions-for-improvements/196037">https://discussions.udacity.com/t/project-suggestions-for-improvements/196037</a></li>
+</ol></body>
+</html>
